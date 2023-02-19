@@ -2,7 +2,9 @@
   --color-bg: #fff;
   --color-blue: #043873;
   --color-blue-light: #4f9cf9;
+  --color-blue-light-hover: #2886fa;
   --color-yellow-light: #ffe492;
+  --color-yellow-light-hover: #fdd458;
   --color-gray-light: #cccccc;
 
   --color-text: #212529;
@@ -104,39 +106,86 @@ a {
 }
 
 /*------------------------------------*\
-    #SECTION
+    #SECTION HEADER
 \*------------------------------------*/
 
 .header {
   width: 100%;
-  height: 90px;
+  /* height: 5.625rem; */
 }
 
 .header__flex {
+  height: 5.625rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 3.75rem;
 }
 
-.header__logo {
-  width: 100px;
-}
+/* .header__logo {
+} */
+
 .header__nav {
-  width: 100px;
+  margin-left: auto;
 }
+
 .header__button {
-  width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
+
 .header--blue {
   background-color: var(--color-blue);
 }
 
+/* Главное меню ------------------------------ */
+
 .nav {
   display: flex;
+  gap: 0.625rem;
 }
 
 .nav__item {
+  display: block;
+  padding: 0.3125rem 0.625rem;
+  font-size: var(--step--0);
+  color: var(--color-white);
+  border-radius: 0.3125rem;
+  transition: 1s;
 }
 
-.top-button {
-  display: flex;
+.nav__item:hover {
+  background-color: var(--color-blue-light);
+  transition: 1s;
+}
+
+/* Главное меню ------------------------------ */
+
+.btn {
+  display: block;
+  padding: 16px 40px;
+  font: 500 var(--step--0) / 1.5em var(--font-inter);
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.btn--primary {
+  background-color: var(--color-blue-light);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-blue-light-hover);
+  transition: 0.5s;
+}
+
+.btn--secondary {
+  background-color: var(--color-yellow-light);
+  color: var(--color-blue);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-yellow-light-hover);
+  transition: 0.5s;
 }
